@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <title>Document</title>
+</head>
+
+<body>
+
+    {%if epoxy %}
+    <p>
+    Total Volume : {{volume}} ml
+    </p>
+    <p>
+        epoxy : {{epoxy}} ml
+    </p>
+    <p>
+        Hardner : {{hardner}} ml
+    </p>
+    <button class="btn"><a href="/" >Start again</a></button>
+    {%else%}
+    <form method="POST" action="/">
+        <label for="volume">Total volume</label>
+        <input type="number" name="volume" required>
+        <input class="btn" type="submit">
+    </form>
+    {%endif%}
+</body>
+
+</html>
