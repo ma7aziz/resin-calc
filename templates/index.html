@@ -10,25 +10,34 @@
 </head>
 
 <body>
+    <header>
+        <h1>Epoxy Calculator</h1>
+    </header>
 
-    {%if epoxy %}
-    <p>
-    Total Volume : {{volume}} ml
-    </p>
-    <p>
-        epoxy : {{epoxy}} ml
-    </p>
-    <p>
-        Hardner : {{hardner}} ml
-    </p>
-    <button class="btn"><a href="/" >Start again</a></button>
-    {%else%}
-    <form method="POST" action="/">
-        <label for="volume">Total volume</label>
-        <input type="number" name="volume" required>
-        <input class="btn" type="submit">
-    </form>
-    {%endif%}
+    <main>
+
+
+        {%if epoxy %}
+        <div class="results">
+            <h2>Total Volume : </h2> <span class="value"> {{volume}} Ml </span>
+        </div>
+        <div class="results">
+            <h2>Epoxy : </h2> <span class="value">{{epoxy}} Ml </span>
+        </div>
+        <div class="results">
+            <h2>Hardner :</h2> <span class="value">{{hardner}} Ml </span>
+        </div>
+        <br>
+        <h4>Ratio: 100-40</h4>
+        <a href="/" class="btn"> Start Again </a>
+        {%else%}
+        <form method="POST" action="/">
+            <h3>Required Volume:</h3>
+            <input type="number" name="volume" required>
+            <input class="btn" type="submit" value="Calculate!">
+        </form>
+        {%endif%}
+    </main>
 </body>
 
 </html>
