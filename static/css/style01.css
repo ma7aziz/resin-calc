@@ -46,7 +46,7 @@ a {
     font-size: 1.2em;
 }
 
-h3 {
+h2 {
     padding-bottom: 10px;
     
 }
@@ -57,15 +57,26 @@ height: 100vh;
 }
 
 
-input[type=number]{
+.vol{
     width: 50%;
-    padding: 10px;
+    padding: 0.5em;
+}
+
+/* .set-ratio {
+    display: grid;
+    grid-template-columns: repeat(1fr 1fr);
+} */
+ .ratio {
+    width: fit-content;
+    padding: 0.5em ;
+    margin: 10px 0 25px 0;
+    display: inline;
+
 }
 
 .value {
     font-size: 16px;
     margin-bottom: 16px;
-
     color: #ffc500;
     font-size: 1.5em;
     font-weight: 600;
@@ -77,15 +88,29 @@ input[type=number]{
     border-bottom: 1px solid #240b36;
 
 }
+input {
+    color: #240b36;
+}
 
 @media only screen and (max-width: 900px) {
  .btn {
      width: 100%;
  }   
- input[type=number] {
+ /* input[type=number] {
      width: 100%;
- }
+ } */
+
  h1 {
      text-align: left;
  }
+ .ratio {
+    width: 25%;
+    margin-bottom: 1em;
+ }
+ 
+ .vol{
+    width: 100%;
+  
+}
+ 
 }
